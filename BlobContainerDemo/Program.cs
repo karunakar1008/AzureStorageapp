@@ -20,9 +20,9 @@ namespace BlobContainerDemo
             connectionString = config["StorageConnectionString"];
             blobServiceClient = new BlobServiceClient(connectionString);
 
-            string file1 = "F:\\azure recordings\\az-204\\6. Programming Storage\\images\\pick1.jpg";
-            string file2 = "F:\\azure recordings\\az-204\\6. Programming Storage\\images\\pick2.jpg";
-            string file3 = "F:\\azure recordings\\az-204\\6. Programming Storage\\images\\pick3.jpg";
+            string file1 = "F:\\azure recordings\\az-204\\6. Programming Storage\\upload images\\pick1.jpg";
+            string file2 = "F:\\azure recordings\\az-204\\6. Programming Storage\\upload images\\pick2.jpg";
+            string file3 = "F:\\azure recordings\\az-204\\6. Programming Storage\\upload images\\pick3.jpg";
 
             BlobContainerClient con1 = CreateContainer("con1", false);
             BlobContainerClient con2 = CreateContainer("con2", true);
@@ -36,7 +36,8 @@ namespace BlobContainerDemo
             //ListBlobsAsAnonymousUser("con1");
             //ListBlobsAsAnonymousUser("con2");
 
-            LeaseDemo(con1);
+            //LeaseDemo(con1);
+            DownloadBlobs(con2);
             Console.ReadLine();
         }
         static BlobContainerClient CreateContainer(string containerName, bool isPublic)
@@ -126,6 +127,20 @@ namespace BlobContainerDemo
             Console.WriteLine("Blob updated using an exclusive lease");
             ms.Close();
             lease.Release();
+        }
+
+        static void DownloadBlobs(BlobContainerClient container)
+        {
+            Console.WriteLine($"List of Blobs in {container.Name} and {container.GetAccessPolicy().Value}");
+            foreach (var blob in container.GetBlobs())
+            {
+                BlobClient blobClient = container.GetBlobClient(blob.Name);
+                var contentResult = blobClient.DownloadContent().Value;
+                var bytes = contentResult.Content.ToArray();
+                File.WriteAllBytes("F:\\azure recordings\\az-204\\6. Programming Storage\\downlodblobs\\" + blob.Name, bytes);
+                Console.WriteLine($"{blob.Name} - {blobClient.Uri}");
+            }
+            Console.WriteLine("");
         }
 
     }
