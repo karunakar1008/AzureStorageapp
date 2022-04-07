@@ -33,10 +33,12 @@ namespace BlobContainerDemo
             //UploadBlob(con2, file3);
             //ListBlobs(con1);
             //ListBlobs(con2);
+
             //ListBlobsAsAnonymousUser("con1");
             //ListBlobsAsAnonymousUser("con2");
 
             //LeaseDemo(con1);
+
             DownloadBlobs(con2);
             Console.ReadLine();
         }
