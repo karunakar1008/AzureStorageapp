@@ -23,15 +23,18 @@ namespace BlobContainerDemo
             string file2 = "F:\\azure recordings\\az-204\\6. Programming Storage\\images\\pick2.jpg";
             string file3 = "F:\\azure recordings\\az-204\\6. Programming Storage\\images\\pick3.jpg";
 
-            BlobContainerClient con1 = CreateContainer("con1", false);
-            BlobContainerClient con2 = CreateContainer("con2", true);
+            //BlobContainerClient con1 = CreateContainer("con1", false);
+            //BlobContainerClient con2 = CreateContainer("con2", true);
 
             //UploadBlob(con1, file1);
             //UploadBlob(con1, file2);
             //UploadBlob(con2, file1);
             //UploadBlob(con2, file3);
-            ListBlobs(con1);
-            ListBlobs(con2);
+            //ListBlobs(con1);
+            //ListBlobs(con2);
+            //ListBlobsAsAnonymousUser("con1");
+            ListBlobsAsAnonymousUser("con2");
+
             Console.ReadLine();
         }
         static BlobContainerClient CreateContainer(string containerName, bool isPublic)
@@ -68,5 +71,20 @@ namespace BlobContainerDemo
             }
             Console.WriteLine("");
         }
+
+        static void ListBlobsAsAnonymousUser(string containerName)
+        {
+            BlobServiceClient blobClientForAnonymous = new BlobServiceClient(new
+           Uri(@"https://kkdemostorage23.blob.core.windows.net"));
+
+            BlobContainerClient container = blobClientForAnonymous.GetBlobContainerClient(containerName);
+            foreach (var blob in container.GetBlobs())
+            {
+                BlobClient blobClient = container.GetBlobClient(blob.Name);
+                Console.WriteLine($"{blob.Name} - {blobClient.Uri}");
+            }
+            Console.WriteLine("");
+        }
+
     }
 }
