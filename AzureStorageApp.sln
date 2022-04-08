@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlobStorageApp", "BlobStora
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TableStorageApp", "TableStorageApp\TableStorageApp.csproj", "{6CE4CCB5-E312-4FBC-A34C-0EF834FDBBB8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageBusQueueApp", "StorageBusQueueApp\StorageBusQueueApp.csproj", "{3C6B2D82-404B-444E-90CD-53B81F7AA8E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlobContainerDemo", "BlobContainerDemo\BlobContainerDemo.csproj", "{32BCBD91-3A72-439D-B78B-B31F2CB0FDEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobContainerDemo", "BlobContainerDemo\BlobContainerDemo.csproj", "{32BCBD91-3A72-439D-B78B-B31F2CB0FDEF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageQueueSenderApp", "StorageQueueSenderApp\StorageQueueSenderApp.csproj", "{EC29FAC1-4E48-4D8D-AAB8-3F808ABE6520}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageQueueReceiverApp", "StorageQueueReceiverApp\StorageQueueReceiverApp.csproj", "{EC8AA1A4-DA32-4077-8371-90F72CF9F963}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,14 +33,18 @@ Global
 		{6CE4CCB5-E312-4FBC-A34C-0EF834FDBBB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CE4CCB5-E312-4FBC-A34C-0EF834FDBBB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CE4CCB5-E312-4FBC-A34C-0EF834FDBBB8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C6B2D82-404B-444E-90CD-53B81F7AA8E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C6B2D82-404B-444E-90CD-53B81F7AA8E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C6B2D82-404B-444E-90CD-53B81F7AA8E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C6B2D82-404B-444E-90CD-53B81F7AA8E8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{32BCBD91-3A72-439D-B78B-B31F2CB0FDEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{32BCBD91-3A72-439D-B78B-B31F2CB0FDEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32BCBD91-3A72-439D-B78B-B31F2CB0FDEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32BCBD91-3A72-439D-B78B-B31F2CB0FDEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC29FAC1-4E48-4D8D-AAB8-3F808ABE6520}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC29FAC1-4E48-4D8D-AAB8-3F808ABE6520}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC29FAC1-4E48-4D8D-AAB8-3F808ABE6520}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC29FAC1-4E48-4D8D-AAB8-3F808ABE6520}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8AA1A4-DA32-4077-8371-90F72CF9F963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8AA1A4-DA32-4077-8371-90F72CF9F963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8AA1A4-DA32-4077-8371-90F72CF9F963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8AA1A4-DA32-4077-8371-90F72CF9F963}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
