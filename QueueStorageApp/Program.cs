@@ -22,7 +22,7 @@ namespace QueueStorageApp
 
             //Delete queue if there are no messages
             QueueClient queueclinet = new QueueClient(connectionstring, "test");
-             RetrieveNextMessageAsync(queueclinet).Wait();
+            RetrieveNextMessageAsync(queueclinet).Wait();
 
             Console.WriteLine("Completed");
         }
@@ -36,6 +36,7 @@ namespace QueueStorageApp
             QueueClient theQueue = serviceClient.CreateQueue("test");
 
         }
+
         /// <summary>
         /// Create Queue if not exist and insert 20 messages
         /// </summary>
@@ -69,7 +70,7 @@ namespace QueueStorageApp
             //Azure.Response<QueueMessage[]> responses = queueClient.ReceiveMessages();
 
             //get the references of top 20 messages in the queue
-            QueueMessage[] retrievedMessage =  queueClient.ReceiveMessages(20);
+            QueueMessage[] retrievedMessage = queueClient.ReceiveMessages(20);
             foreach (var message in retrievedMessage)
             {
                 Console.WriteLine($"Dequeued message: '{message.Body}'");
