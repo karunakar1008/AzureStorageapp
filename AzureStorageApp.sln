@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueStorageApp", "QueueStorageApp\QueueStorageApp.csproj", "{1A5C38EC-97A6-475C-A71F-DAA00BDDB6CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueStorageApp2", "QueueStorageApp\QueueStorageApp2.csproj", "{1A5C38EC-97A6-475C-A71F-DAA00BDDB6CB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlobStorageApp", "BlobStorageApp\BlobStorageApp.csproj", "{03C802EE-9F9E-454F-9EC8-93E9E7CF4B57}"
 EndProject
@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TableStorageApp", "TableSto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlobContainerDemo", "BlobContainerDemo\BlobContainerDemo.csproj", "{32BCBD91-3A72-439D-B78B-B31F2CB0FDEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageQueueSenderApp", "StorageQueueSenderApp\StorageQueueSenderApp.csproj", "{EC29FAC1-4E48-4D8D-AAB8-3F808ABE6520}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageQueueSenderApp", "StorageQueueSenderApp\StorageQueueSenderApp.csproj", "{EC29FAC1-4E48-4D8D-AAB8-3F808ABE6520}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StorageQueueReceiverApp", "StorageQueueReceiverApp\StorageQueueReceiverApp.csproj", "{EC8AA1A4-DA32-4077-8371-90F72CF9F963}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StorageQueueReceiverApp", "StorageQueueReceiverApp\StorageQueueReceiverApp.csproj", "{EC8AA1A4-DA32-4077-8371-90F72CF9F963}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
